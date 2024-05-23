@@ -14,8 +14,8 @@ return {
 			local version = " v" .. v.major .. "." .. v.minor .. "." .. v.patch
 			dashboard.section.buttons.val = {
 				dashboard.button("n", "   New file", ":ene <BAR> startinsert <CR>"),
-				dashboard.button("f", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
-				dashboard.button("e", "   File Explorer", ":cd $HOME | Neotree reveal float<CR>"),
+				dashboard.button("f", "󰮗   Find file", ":Telescope find_files<CR>"),
+				dashboard.button("e", "   File Explorer", ":Neotree filesystem reveal float<CR>"),
 				dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
 				dashboard.button("c", "   Configuration", ":e ~/.config/nvim/lua/vim-options.lua<CR>"),
 				dashboard.button("R", "󱘞   Ripgrep", ":Telescope live_grep<CR>"),
@@ -37,7 +37,7 @@ return {
  			centerText(version, 50),
  		}
 
-			dashboard.section.header.val = ascii.get_random("text", "neovim") 
+			dashboard.section.header.val = ascii.get_random("text", "neovim")
 
 			-- Send config to alpha
 			alpha.setup(dashboard.opts)
