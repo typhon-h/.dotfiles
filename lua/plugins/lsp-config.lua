@@ -13,9 +13,7 @@ return {
 					"lua_ls",
 					"clangd",
 					"html",
-					"jdtls",
 					"tsserver",
-					"kotlin_language_server",
 					"pyright",
 					"omnisharp",
 					"volar",
@@ -26,33 +24,30 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+
 			lspconfig.lua_ls.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.clangd.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.html.setup({
-        capabilities = capabilities
-      })
-			lspconfig.jdtls.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.pyright.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.omnisharp.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			lspconfig.volar.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 
@@ -60,7 +55,7 @@ return {
 			vim.keymap.set("n", "<leader>gd", telescope.lsp_definitions, {})
 			vim.keymap.set("n", "<leader>gi", telescope.lsp_implementations, {})
 			vim.keymap.set("n", "<leader>gr", telescope.lsp_references, {})
-      vim.keymap.set("n", "<leader>d", telescope.diagnostics, {})
+			vim.keymap.set("n", "<leader>d", telescope.diagnostics, {})
 		end,
 	},
 }
