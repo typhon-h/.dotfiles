@@ -43,16 +43,14 @@ return {
 					"I’ve Got A Jar Of Dirt",
 					"Let’s-A Go!",
 					"A New Challenger Approaches",
-					"What Is The Air-Speed Velocity Of An Unladen Swallow",
 					"That’s What She Said",
-					"It's Going To Be Legen … Wait For It … Dary. Legendary.",
 					"Technoblade Joined The Game",
 					"I'll Take A Potato Chip... And Eat It",
 					"10 Billion Percent!",
 					"I Smell Snow",
 					"‘No!’, Jimmy Protested",
 				}
-                return lines[math.random(1,#lines)]
+				return lines[math.random(1, #lines)]
 			end
 
 			dashboard.section.footer.val = {
