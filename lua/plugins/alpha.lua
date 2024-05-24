@@ -29,13 +29,39 @@ return {
 				return string.rep(" ", leftPadding) .. text .. string.rep(" ", rightPadding)
 			end
 
- 		dashboard.section.footer.val = {
- 			centerText("Kaizoku Ou Ni Ore Wa Naru", 50),
- 			" ",
- 			centerText(date, 50),
- 			centerText(time, 50),
- 			centerText(version, 50),
- 		}
+			local function randomFlavourText()
+				local lines = {
+					"I Will Become King Of The Pirates",
+					"I Solemnly Swear That I Am Up To No Good",
+					"The Cake Is A Lie",
+					"Just Keep Swimming",
+					"Smell Ya Later!",
+					"With Great Power Comes Great Need To Take A Nap",
+					"Stupid People Are Dangerous",
+					"Allons-y!",
+					"I Love It When A Plan Comes Together",
+					"I’ve Got A Jar Of Dirt",
+					"Let’s-A Go!",
+					"A New Challenger Approaches",
+					"What Is The Air-Speed Velocity Of An Unladen Swallow",
+					"That’s What She Said",
+					"It's Going To Be Legen … Wait For It … Dary. Legendary.",
+					"Technoblade Joined The Game",
+					"I'll Take A Potato Chip... And Eat It",
+					"10 Billion Percent!",
+					"I Smell Snow",
+					"‘No!’, Jimmy Protested",
+				}
+                return lines[math.random(1,#lines)]
+			end
+
+			dashboard.section.footer.val = {
+				centerText(randomFlavourText(), 50),
+				" ",
+				centerText(date, 50),
+				centerText(time, 50),
+				centerText(version, 50),
+			}
 
 			dashboard.section.header.val = ascii.get_random("text", "neovim")
 
