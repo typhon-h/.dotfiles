@@ -49,12 +49,13 @@ return {
 				capabilities = capabilities,
 			})
 
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 
 			local telescope = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>gd", telescope.lsp_definitions, {})
-			vim.keymap.set("n", "<leader>gi", telescope.lsp_implementations, {})
-			vim.keymap.set("n", "<leader>gr", telescope.lsp_references, {})
+			vim.keymap.set("n", "<leader>ld", telescope.lsp_definitions, {})
+			vim.keymap.set("n", "<leader>li", telescope.lsp_implementations, {})
+			vim.keymap.set("n", "<leader>lr", telescope.lsp_references, {})
 			vim.keymap.set("n", "<leader>d", telescope.diagnostics, {})
 		end,
 	},
