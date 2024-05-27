@@ -26,6 +26,8 @@ return {
 			dapui.close()
 		end
 
+		vim.keymap.set("n", "<leader>dt", dapui.toggle, {})
+		vim.keymap.set("n", "<leader>ds", dap.close, {})
 		vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
 		vim.keymap.set("n", "<leader>dc", dap.continue, {})
 		vim.keymap.set("n", "<leader>dd", dap.step_over, {})
