@@ -1,5 +1,5 @@
 return {
-    "typhon-h/nvim-java",
+    "nvim-java/nvim-java",
     dependencies = {
         "nvim-java/lua-async-await",
         "nvim-java/nvim-java-refactor",
@@ -16,7 +16,7 @@ return {
                     "github:nvim-java/mason-registry",
                     "github:mason-org/mason-registry",
                 },
-            },
+            }
         },
         {
             "williamboman/mason-lspconfig.nvim",
