@@ -11,16 +11,15 @@ return {
                     path_display = { "smart" },
                     winblend = 10,
                     layout_strategy = "flex",
+                    layout_config = {
+                        width = 0.99
+                    },
                     file_ignore_patterns = {
                         "node_modules",
                         "build",
                     },
                 },
                 pickers = {
-                    diagnostics = {
-                        theme = "dropdown",
-                        layout_strategy = "vertical",
-                    },
                 },
             })
             local builtin = require("telescope.builtin")
