@@ -21,7 +21,7 @@ return {
       vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
       local diagnostics_active = true
-      vim.keymap.set("n", "<leader>dd", function()
+      vim.keymap.set("n", "<leader>dh", function()
         diagnostics_active = not diagnostics_active
 
         vim.diagnostic.config({ virtual_text = diagnostics_active })
