@@ -15,8 +15,8 @@ vim.keymap.set("v", "<leader>yy", '"+yy')
 -- Find and replace current word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Use Shift-Direction to navigate panes
-vim.keymap.set("n", "HH", "<C-w>h", {})
-vim.keymap.set("n", "JJ", "<C-w>j", {})
-vim.keymap.set("n", "KK", "<C-w>k", {})
-vim.keymap.set("n", "LL", "<C-w>l", {})
+-- Use double arrow to navigate panes
+vim.keymap.set("n", "<Left><Left>", "<C-w>h", {})
+vim.keymap.set("n", "<Down><Down>", "<C-w>j", {})
+vim.keymap.set("n", "<Up><Up>", "<C-w>k", {})
+vim.keymap.set("n", "<Right><Right>", "<C-w>l", {})
