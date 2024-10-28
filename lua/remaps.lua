@@ -16,7 +16,7 @@ vim.keymap.set("v", "<leader>yy", '"+yy')
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Use double arrow to navigate panes
-vim.keymap.set("n", "<Left><Left>", "<C-w>h", {})
-vim.keymap.set("n", "<Down><Down>", "<C-w>j", {})
-vim.keymap.set("n", "<Up><Up>", "<C-w>k", {})
-vim.keymap.set("n", "<Right><Right>", "<C-w>l", {})
+vim.keymap.set("n", "<C-Left>", "<C-w>h", {})
+vim.keymap.set("n", "<C-Down>", "<C-w>j", {})
+vim.keymap.set("n", "<C-Up>", "<C-w>k", {})
+vim.keymap.set("n", "<C-Right>", "<C-w>l", {})
