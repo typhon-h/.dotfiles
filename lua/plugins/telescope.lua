@@ -9,7 +9,6 @@ return {
           prompt_prefix = " ",
           selection_caret = " ",
           path_display = { "smart" },
-          winblend = 10,
           layout_strategy = "flex",
           layout_config = {
             width = 0.99,
