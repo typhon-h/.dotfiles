@@ -14,9 +14,9 @@ return {
             width = 0.99,
           },
           file_ignore_patterns = {
-            "node_modules/*",
-            "build/*",
-            "bin/*",
+            "node_modules/",
+            "build/",
+            "bin/",
           },
         },
         pickers = {},
