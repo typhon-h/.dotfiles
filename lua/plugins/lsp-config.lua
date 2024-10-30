@@ -19,12 +19,35 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			require("java").setup()
+			require("java").setup({
+        jdk = {
+          auto_install = false,
+        },
+      })
 			require("mason-lspconfig").setup_handlers({
 				function(server_name) -- default handler (optional)
-					require("lspconfig")[server_name].setup({
+					-- generic configs
+					local config = {
 						capabilities = capabilities,
-					})
+					}
+
+					if server_name == "jdtls" then
+						config.settings = {
+							java = {
+								configuration = {
+									runtimes = {
+										{
+											name = "SystemJava",
+											path = "/usr/bin/java",
+											default = true,
+										},
+									},
+								},
+							},
+						}
+					end
+
+					require("lspconfig")[server_name].setup(config)
 				end,
 			})
 
