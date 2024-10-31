@@ -5,11 +5,11 @@ sudo apt-get -y --ignore-missing install $(< packages.list)
 
 
 # Starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 
 # Kitty
-curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh -s -- launch=n
 
 
 # Nerd Font
@@ -20,13 +20,6 @@ fc-cache -fv
 
 
 # Setup config symlinks
-ln -sf .stow-global-ignore $HOME/.stow-global-ignore
+ln -sf ${pwd}/.stow-global-ignore $HOME/.stow-global-ignore
 stow -v -R --adopt -t $HOME */
 git restore .
-
-
-# Source the relevant rc file if possible
-rc_file="$HOME/.${SHELL##*/}rc"
-if [ -f "$rc_file" ]; then
-    source "$rc_file"
-fi
