@@ -20,9 +20,10 @@ fc-cache -fv
 
 
 # Setup config symlinks
-mv .stow-global-ignore ~/.stow-global-ignore
+ln -sf .stow-global-ignore $HOME/.stow-global-ignore
 stow -v -R --adopt -t $HOME */
 git restore .
+
 
 # Source the relevant rc file if possible
 rc_file="$HOME/.${SHELL##*/}rc"
