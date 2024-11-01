@@ -23,7 +23,7 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 
 # Nerd Font
 curl -L -o ~/.local/share/fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
+unzip -o ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
 rm ~/.local/share/fonts/JetBrainsMono.zip
 fc-cache -fv
 
