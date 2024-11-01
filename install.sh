@@ -23,12 +23,12 @@ unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
 rm ~/.local/share/fonts/JetBrainsMono.zip
 fc-cache -fv
 
-if [ -f ~/.bashrc]; then
-  mv ~/.bashrc ~/.bashrc.backup
+if [ -f "$HOME/.bashrc"]; then
+  mv "$HOME/.bashrc" "$HOME/.bashrc.backup"
 fi
 
 if [ -f ~/.zshc]; then
-  mv ~/.zshrc ~/.zshrc.backup
+  mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
 fi
 
 cd .dotfiles
