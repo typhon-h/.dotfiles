@@ -1,5 +1,9 @@
 #!/bin/bash
 
+git clone git@github.com:typhon-h/.dotfiles.git $HOME
+cd $HOME
+
+
 # Install required packages
 sudo apt -y --ignore-missing install $(< packages.list)
 
