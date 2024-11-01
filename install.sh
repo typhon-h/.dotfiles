@@ -34,6 +34,6 @@ fi
 cd .dotfiles
 
 # Setup config symlinks
-ln -sf ./.stow-global-ignore $HOME/.stow-global-ignore
-stow -v -R --adopt -t $HOME ./*/
+ln -sf .stow-global-ignore $HOME/.stow-global-ignore
+stow -v -R --adopt -t $HOME */
 git restore .
