@@ -6,7 +6,7 @@ git clone git@github.com:typhon-h/.dotfiles.git
 
 
 # Install required packages
-sudo apt-get -y --ignore-missing install $(< .dotfiles/packages.list)
+xargs -a .dotfiles/packages.list sudo apt-get -y --ignore-missing install
 
 
 # Starship
