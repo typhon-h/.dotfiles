@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git clone git@github.com:typhon-h/.dotfiles.git $HOME
 cd $HOME
+git clone git@github.com:typhon-h/.dotfiles.git
 
 
 # Install required packages
