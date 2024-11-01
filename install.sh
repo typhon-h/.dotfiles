@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install required packages
-sudo apt-get -y --ignore-missing install $(< packages.list)
+sudo apt -y --ignore-missing install $(< packages.list)
 
 
 # Starship
