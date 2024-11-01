@@ -7,7 +7,7 @@ git clone git@github.com:typhon-h/.dotfiles.git
 
 # Install required packages
 xargs -a .dotfiles/apt-packages.list sudo apt-get -y --ignore-missing install
-xargs -a .dotfiles/snap-packages.list sudo snap --classic install
+xargs -a .dotfiles/snap-packages.list sudo snap install --classic
 
 # Starship
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
