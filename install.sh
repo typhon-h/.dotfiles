@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd $HOME
+rm -rf .dotfiles/
 git clone git@github.com:typhon-h/.dotfiles.git
 
 
