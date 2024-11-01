@@ -24,7 +24,9 @@ rm ~/.local/share/fonts/JetBrainsMono.zip
 fc-cache -fv
 
 
+cd .dotfiles
+
 # Setup config symlinks
-ln -sf .dotfiles/.stow-global-ignore $HOME/.stow-global-ignore
+ln -sf .stow-global-ignore $HOME/.stow-global-ignore
 stow -v -R --adopt -t $HOME */
 git restore .
