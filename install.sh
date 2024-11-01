@@ -23,6 +23,13 @@ unzip ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
 rm ~/.local/share/fonts/JetBrainsMono.zip
 fc-cache -fv
 
+if [ -f ~/.bashrc]; then
+  mv ~/.bashrc ~/.bashrc.backup
+fi
+
+if [ -f ~/.zshc]; then
+  mv ~/.zshrc ~/.zshrc.backup
+fi
 
 cd .dotfiles
 
