@@ -3,7 +3,7 @@
 cd $HOME
 rm -rf .dotfiles/
 git clone git@github.com:typhon-h/.dotfiles.git
-
+cd .dotfiles/
 
 # Check for OSX
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -21,8 +21,6 @@ if [ -f "$HOME/.zshc"]; then
   mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
 fi
 
-
-cd .dotfiles
 
 # Setup config symlinks
 ln -sf "$PWD/.stow-global-ignore" "$HOME/.stow-global-ignore"
