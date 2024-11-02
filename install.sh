@@ -31,7 +31,7 @@ if [ -f "$HOME/.bashrc"]; then
   mv "$HOME/.bashrc" "$HOME/.bashrc.backup"
 fi
 
-if [ -f ~/.zshc]; then
+if [ -f "$HOME/.zshc"]; then
   mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
 fi
 
