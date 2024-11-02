@@ -5,7 +5,6 @@ tap "osx-cross/avr"
 
 brew "git"
 brew "gradle"
-brew "kotlin"
 brew "neovim"
 brew "node"
 brew "ripgrep"
