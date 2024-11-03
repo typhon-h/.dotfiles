@@ -143,14 +143,14 @@ defaults write com.apple.dock minimize-to-application -int 1
 
 # Prefer tabs when opening documents
 defaults write Apple\ Global\ Domain AppleWindowTabbingMode -string "fullscreen"
-defaults write Apple\ Global\ Domain
-defaults write Apple\ Global\ Domain
-defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 
 ################################################################################
 # System Settings > Trackpad
 ################################################################################
+
+# Point & Click > Click
+defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # Point & Click > Secondary Click > Click in Bottom-Right Corner
 defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2

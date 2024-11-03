@@ -30,6 +30,7 @@ brew bundle -v --file Brewfile
 # casks on osx vs misc install scripts on linux
 if echo "$OSTYPE" | grep -q "^darwin"; then
   brew bundle -v --file Brewfile.osx-casks
+  ./.macos # load preferences
 else
   ./install_linux_apps.sh
 fi
