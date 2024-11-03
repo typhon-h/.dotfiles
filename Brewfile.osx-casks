@@ -1,6 +1,7 @@
 # osx specific installs
 cask "font-jetbrains-mono-nerd-font"
 cask "kitty"
+cask "visual-studio-code"
 
 # cross platform installs
 cask_apps = File.readlines('cross-platform.apps').map(&:strip)
