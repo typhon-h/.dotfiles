@@ -3,6 +3,7 @@ tap "homebrew/services"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
 
+brew "gcc"
 brew "git"
 brew "gradle"
 brew "neovim"
