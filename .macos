@@ -155,8 +155,8 @@ defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 # Point & Click > Secondary Click > Click in Bottom-Right Corner
 defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadRightClick -int 2
-defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -int 2
+defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadRightClick -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -int 0
 
 # Point & Click > Tap to click
 defaults write com.apple.AppleBluetoothMultitouch.trackpad Clicking -int 1
