@@ -13,6 +13,8 @@ brew "starship"
 brew "osx-cross/arm/arm-gcc-bin@10"
 brew "code-cli"
 brew "dotnet"
+brew "xclip"
+brew "unzip"
 
 cask "android-studio"
 cask "font-jetbrains-mono-nerd-font"
