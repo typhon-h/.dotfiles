@@ -4,6 +4,8 @@ while IFS= read -r app; do
   sudo snap install "$app" --classic
 done < cross-platform.apps
 
+sudo snap install code --classic
+
 # Kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh -s -- launch=n
 ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
