@@ -15,7 +15,7 @@ if [ "$OSTYPE" != "darwin"* ]; then
   echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> bashrc/.bashrc
 fi
 
-brew bundle --file Brewfile
+brew bundle -v --file Brewfile
 
 # Setup config symlinks
 ln -sf "$PWD/.stow-global-ignore" "$HOME/.stow-global-ignore"
