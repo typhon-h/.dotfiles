@@ -8,7 +8,7 @@ cd .dotfiles/
 yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Only on linux
-if [[ "$OSTYPE" != "darwin"* ]]; then
+if [ "$OSTYPE" != "darwin"* ]; then
   sudo apt-get install build-essential procps curl file git
   test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
   test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
