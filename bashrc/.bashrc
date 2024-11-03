@@ -55,5 +55,8 @@ alias c='clear'
 # Default editor
 export EDITOR="nvim"
 
+
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 PATH="$HOME/.local/bin:$PATH"
 eval "$(starship init bash)"
