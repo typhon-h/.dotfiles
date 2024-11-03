@@ -1,0 +1,183 @@
+#!/bin/bash
+
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+################################################################################
+# Miscellaneous
+################################################################################
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Stop iTunes from responding to the keyboard media keys
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+
+################################################################################
+# System Settings > Sound
+################################################################################
+
+# Play feedback when volume is changed
+defaults write Apple\ Global\ Domain com.apple.sound.beep.feedback -int 1
+
+# Alert sound
+defaults write Apple\ Global\ Domain com.apple.sound.beep.sound -string "/System/Library/Sounds/Morse.aiff"
+
+
+################################################################################
+# System Settings > Language & Region
+################################################################################
+
+# Live Text
+defaults write Apple\ Global\ Domain AppleLiveTextEnabled -int 1
+
+
+################################################################################
+# System Settings > Notifications
+################################################################################
+
+# Notifications > Show previews > When Unlocked
+defaults write com.apple.ncprefs content_visibility -int 2
+
+
+################################################################################
+# System Settings > Date & Time
+################################################################################
+
+# 24-hour time
+defaults write Apple\ Global\ Domain AppleICUForce24HourTime -int 1
+
+
+################################################################################
+# System Settings > Appearance
+################################################################################
+
+# Appearance
+defaults write Apple\ Global\ Domain AppleInterfaceStyle -string "Dark"
+
+# Accent Color
+defaults write Apple\ Global\ Domain AppleAccentColor -int 6
+
+# Highlight Color
+defaults write Apple\ Global\ Domain AppleHighlightColor -string "1.000000 0.749020 0.823529 Pink"
+
+# Show scroll bars
+defaults write Apple\ Global\ Domain AppleShowScrollBars -string "Automatic"
+
+
+################################################################################
+# System Settings > Control Centre
+################################################################################
+
+# Accessibility Shortcuts > Don't Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ AccessibilityShortcuts -int 0
+
+# Battery > Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ Battery -int 1
+
+# Bluetooth > Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ Bluetooth -int 1
+
+# Clock > Clock Options
+defaults write com.apple.menuextra.clock FlashDateSeparators -int 0
+defaults write com.apple.menuextra.clock IsAnalog -int 0
+defaults write com.apple.menuextra.clock Show24Hour -int 1
+defaults write com.apple.menuextra.clock ShowDate -int 0
+defaults write com.apple.menuextra.clock ShowDayOfWeek -int 1
+defaults write com.apple.menuextra.clock ShowSeconds -int 1
+
+# Display > Don't Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ Display -int 0
+
+# Keyboard Brightness > Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ KeyboardBrightness -int 1
+
+# Now Playing > Don't Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ NowPlaying -int 0
+
+# Screen Mirroring > Show When Active
+defaults write com.apple.airplay showInMenuBarIfPresent -int 1
+
+# Sound > Always Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ Sound -int 1
+
+# Fast User Switching > Don't Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ UserSwitcher -int 0
+
+# Wi-Fi > Show in Menu Bar
+defaults write com.apple.controlcenter NSStatusItem\ Visible\ WiFi -int 1
+
+# Automatically hide and show the menu bar > In Full Screen Only
+defaults write Apple\ Global\ Domain AppleMenuBarVisibleInFullscreen -int 1
+
+
+################################################################################
+# System Settings > Desktop & Dock
+################################################################################
+
+# Double-click a window's title bar to > Minimise
+defaults write Apple\ Global\ Domain AppleActionOnDoubleClick -string "Minimize"
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -int 1
+
+# Size
+defaults write com.apple.dock tilesize -int 69
+
+# Magnification
+defaults write com.apple.dock magnification -int 1
+defaults write com.apple.dock largesize -int 82
+
+# Minimise windows using > Genie Effect
+defaults write com.apple.dock mineffect -string "genie"
+
+# Position on screen
+defaults write com.apple.dock orientation -string "bottom"
+
+# Minimise windows into application icon
+defaults write com.apple.dock minimize-to-application -int 1
+
+# Prefer tabs when opening documents
+defaults write Apple\ Global\ Domain AppleWindowTabbingMode -string "fullscreen"
+defaults write Apple\ Global\ Domain
+defaults write Apple\ Global\ Domain
+defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
+
+
+################################################################################
+# System Settings > Trackpad
+################################################################################
+
+# Point & Click > Secondary Click > Click in Bottom-Right Corner
+defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.AppleBluetoothMultitouch.trackpad TrackpadRightClick -int 2
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -int 2
+
+# Point & Click > Tap to click
+defaults write com.apple.AppleBluetoothMultitouch.trackpad Clicking -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+
+# Point & Click > Tracking Speed
+defaults write Apple\ Global\ Domain com.apple.trackpad.scaling -int 3
+
+# Scroll & Zoom > Natural Scrolling
+defaults write Apple\ Global\ Domain com.apple.swipescrolldirection -int 1
+
+
+################################################################################
+# Finder > Preferences
+################################################################################
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
