@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Loading OSX Preferences..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -175,4 +176,7 @@ defaults write Apple\ Global\ Domain com.apple.swipescrolldirection -int 1
 
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+
+echo "OSX Preferences Loaded. Restart is required :)"
 
