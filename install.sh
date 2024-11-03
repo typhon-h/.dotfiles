@@ -14,6 +14,8 @@ if ! echo "$OSTYPE" | grep -q "^darwin"; then
   sudo apt-get install build-essential procps curl file git
   test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> bashrc/.bashrc
+else
+  xcode-select --install
 fi
 
 brew bundle -v --file Brewfile
