@@ -1,6 +1,6 @@
 #!/bin/bash
 
-xargs -a .dotfiles/cross-platform.apps sudo snap install --classic
+xargs -a cross-platform.apps sudo snap install --classic
 
 # Kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh -s -- launch=n
