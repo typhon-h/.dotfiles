@@ -8,7 +8,7 @@ cd .dotfiles/
 yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Only on linux
-if [ "$OSTYPE" != "darwin"* ]; then
+if ! echo "$OSTYPE" | grep -q "^darwin"; then
   sudo apt update && sudo apt upgrade
   sudo apt install snapd
   sudo apt-get install build-essential procps curl file git
@@ -19,7 +19,8 @@ fi
 
 brew bundle -v --file Brewfile
 
-if [ "$OSTYPE" == "darwin"* ]; then
+# casks on osx vs misc install scripts on linux
+if echo "$OSTYPE" | grep -q "^darwin"; then
   brew bundle -v --file Brewfile.osx-casks
 else
   ./install_linux_apps.sh
