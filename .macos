@@ -113,7 +113,7 @@ defaults write com.apple.controlcenter NSStatusItem\ Visible\ UserSwitcher -int 
 defaults write com.apple.controlcenter NSStatusItem\ Visible\ WiFi -int 1
 
 # Automatically hide and show the menu bar > In Full Screen Only
-defaults write Apple\ Global\ Domain AppleMenuBarVisibleInFullscreen -int 1
+defaults write Apple\ Global\ Domain AppleMenuBarVisibleInFullscreen -int 0
 
 
 ################################################################################
