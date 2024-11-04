@@ -1,8 +1,3 @@
-# Aliases
-alias ls='ls --color'
-alias c='clear'
-
-# Default editor
-export EDITOR="nvim"
+source ~/.commonrc
 
 eval "$(starship init zsh)"

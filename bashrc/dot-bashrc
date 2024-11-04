@@ -1,4 +1,4 @@
-
+source ~/.commonrc
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -47,16 +47,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Aliases
-alias ls='ls --color'
-alias grep='grep --color'
-alias c='clear'
-
-# Default editor
-export EDITOR="nvim"
-
-
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-PATH="$HOME/.local/bin:$PATH"
 eval "$(starship init bash)"
