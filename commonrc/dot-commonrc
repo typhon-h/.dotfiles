@@ -1,8 +1,28 @@
 
 # Aliases
 alias ls='ls --color'
+alias lsa='ls -a'
+alias lsl='ls -l'
+
 alias grep='grep --color'
+
 alias c='clear'
+alias q='exit'
+alias :q='exit'
+alias quit='exit'
+
+alias chux="chmod u+x"
+
+alias ..='cd ..'
+alias mkdir='mkdir -pv'
+
+alias diff='diff --color'
+
+alias gs="git status -sb"
+alias gl="git log"
+alias ga="git add -A"
+alis gc="git commit -m"
+
 
 # Default editor
 export EDITOR="nvim"
