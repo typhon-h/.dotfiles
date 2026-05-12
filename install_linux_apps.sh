@@ -19,3 +19,6 @@ curl -L -o ~/.local/share/fonts/JetBrainsMono.zip https://github.com/ryanoasis/n
 unzip -o ~/.local/share/fonts/JetBrainsMono.zip -d ~/.local/share/fonts/
 rm ~/.local/share/fonts/JetBrainsMono.zip
 fc-cache -fv
+
+# QMK
+curl -fsSL https://install.qmk.fm | sh
