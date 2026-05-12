@@ -9,4 +9,9 @@ cask_apps.each do |app|
   cask app
 end
 
+# QMK MacOS
+tap "osx-cross/avr"
+tap "osx-cross/arm"
+brew "qmk/qmk/qmk"
+
 
